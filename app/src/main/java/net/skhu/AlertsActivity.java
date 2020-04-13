@@ -101,4 +101,43 @@ public class AlertsActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public void button5_clicked(View button) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.selectAnimal);
+
+        builder.setNeutralButton(R.string.radioDog, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int index) {
+                // 선택된 항목에 대한 작업 실행
+                int drawableId = R.drawable.animal_dog_large;
+
+                ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+                imageView1.setImageResource(drawableId);
+            }
+        });
+        builder.setPositiveButton(R.string.radioCat, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int index) {
+                // 선택된 항목에 대한 작업 실행
+                int drawableId = R.drawable.animal_cat_large;
+
+                ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+                imageView1.setImageResource(drawableId);
+            }
+        });builder.setNegativeButton(R.string.radioOwl, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int index) {
+                // 선택된 항목에 대한 작업 실행
+                int drawableId = R.drawable.animal_owl_large;
+
+                ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+                imageView1.setImageResource(drawableId);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }

@@ -18,7 +18,7 @@ public class SpinnersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinners);
 
-        final String[] stringArray = { "집주소", "직장주소", "기타" };
+        String[] stringArray = { "집주소", "직장주소", "기타" };
         ArrayAdapter<String> adapter =
                 new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, stringArray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
